@@ -1,0 +1,21 @@
+{
+  "name": "marigoldbank",
+  "version": "1.0.0",
+  "description": "MarigoldBank",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "XSYTO",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "10.4.5",
+    "laravel-mix": "^6.0.48"
+  },
+  "devDependencies": {
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.52.2",
+    "sass-loader": "^12.1.0"
+  }
+}

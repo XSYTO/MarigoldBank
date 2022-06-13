@@ -1,0 +1,17 @@
+{
+    "name": "arceb/marigold-bank",
+    "description": "MarigoldBank",
+    "license": "ISC",
+    "autoload": {
+        "psr-4": {
+            "MarigoldBank\\": "src/app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "XSYTO",
+            "email": "arcebasovas@gmail.com"
+        }
+    ],
+    "require": {}
+}
