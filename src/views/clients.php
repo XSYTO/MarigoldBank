@@ -9,10 +9,10 @@ require __DIR__ . '/top.php';
             <img src="../img/marigold1.png" alt="icon" class="">
         </div>
         <div class="links">
-            <a href="../marigold/bank.php">Pagrindinis</a>
-            <a href="../bankAccount/clientlist.php">Klientų sarašas</a>
-            <a href="../marigold/BecomeCustomer.php">Registruoti nauja sąskaitą</a>
-            <a href="../marigold/login.php">Prisijungti</a>
+            <a href="">Pagrindinis</a>
+            <a href="/clients">Klientų sarašas</a>
+            <a href="/register">Registruoti nauja sąskaitą</a>
+            <a href="">Prisijungti</a>
         </div>
     </section>
     <section class="containerClients">
@@ -21,6 +21,18 @@ require __DIR__ . '/top.php';
         </div>
         <div class="clientTable">
             <div class="clientList">
+            <?php foreach ($users as $user) : ?>
+                <br>
+                <span>Sąskaitos Nr.:<?= $user['AccountNumber'] ?></span>
+                <span>Vardas:<?= $user['Firstname'] ?></span>
+                <span>Pavarde:<?= $user['Lastname'] ?></span>
+                <span>Id:<?= $user['Id'] ?></span>
+                <span>Turimos lėšos:<?= $user['sum'] ?></span>
+                <a  href="<?='//marigoldbank.lt/addMoney/'. $user['id']?>">Pridėti lėšas</a>
+                <a  href="<?= '//marigoldbank.lt/remMoney/'.$user['id']?>">Nuskaičiuoti lėšas</a>
+                <br>
+                <hr>
+            <?php endforeach ?>
             
             </div>
         </div>

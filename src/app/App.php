@@ -1,6 +1,7 @@
 <?php
 namespace MarigoldBank;
 use MarigoldBank\Controllers\HomeController;
+use MarigoldBank\Controllers\ClientsController;
 
 
 class App {
@@ -37,7 +38,21 @@ class App {
         if(count($uri) == 1 && $uri[0] === 'login') {
             return (new HomeController())->login();
         }
+
+        if('GET' == $metodas && count($uri) == 2 && $uri[0] === 'addMoney') {
+            return (new HomeController())->Add($uri[1]);
+
+        }
+        if('POST' == $metodas && count($uri) == 2 && $uri[0] === 'addMoney') {
+            return (new HomeController())->CashAdd($uri[1]);
+
+        }
+
         if('GET' == $metodas && count($uri) == 1 && $uri[0] === 'clients') {
+            return (new HomeController())->clientsList();
+
+        }
+        if('POST' == $metodas && count($uri) == 1 && $uri[0] === 'clients') {
             return (new HomeController())->clientsList();
 
         }

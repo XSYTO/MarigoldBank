@@ -1,7 +1,6 @@
 <?php
 
 require __DIR__ . '/top.php';
-require __DIR__.'/header.php';
 ?>
 <section class="footer">
         <div class="Contact">
